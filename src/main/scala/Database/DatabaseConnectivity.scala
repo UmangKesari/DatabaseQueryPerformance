@@ -2,7 +2,7 @@ package Database
 
 import java.sql.{Connection, DriverManager, SQLException, Statement}
 
-trait Database {
+trait DatabaseConnectivity {
 
   val url: String = ""
   val driver: String = ""
@@ -16,6 +16,7 @@ trait Database {
     }
     catch {
       case exc:SQLException => throw exc
+        exc.getMessage()
     }
   }
   def executeQuery(query: String, connection: Connection): Long = {

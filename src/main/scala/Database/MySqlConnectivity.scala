@@ -1,7 +1,7 @@
 package Database
 import java.sql.{Connection,DriverManager}
 
-class MySqlConnectivity extends Database {
+class MySqlConnectivity extends DatabaseConnectivity {
 
   override val url = "com.mysql.jdbc.Driver"
   override val driver = "jdbc:mysql://localhost:3306/mysqlSBT"
